@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div style="margin-left:30px">
+<h1 style="color: darkgreen;"> Flask App </h1>
+     
+    <h2>Req Headers</h2>
+    {% for key, value in hdrs.items() %}
+        <p>
+            <b>{{key}} :</b> &nbsp;&nbsp; <span style='color: blue;'>{{value}}</span>
+        </p>
+    {% endfor %}
+
+    <h2>Req Fields</h2>
+    {% for key, value in fields.items() %}
+        <p>
+            <b>{{key}} :</b> &nbsp;&nbsp; <span style='color: purple;'>{{value}}</span>
+        </p>
+    {% endfor %}
+
+</div>
+{% endblock %}
